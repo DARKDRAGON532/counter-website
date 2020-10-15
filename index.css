@@ -1,0 +1,33 @@
+body{
+    background-color: #36393E;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body h1{
+    font-size: 100px;
+    border: none;
+}
+#header{
+    color:red;
+}
+#number{
+    color: gray;
+}
+.button{
+    border-radius: 1em;
+    display: inline;
+    text-align: center;
+    background-color: blue;
+    width: 200px;
+    height:100px;
+    outline: none;
+    border:none;
+    padding: 20px 50px;
+    font-size: 25px;
+    margin-left: 10px;
+}
+button:hover{
+    background-color: lightblue;
+}
