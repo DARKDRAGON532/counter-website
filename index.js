@@ -1,32 +1,25 @@
 
-const numberHTML = document.getElementById("number")
-
+const numberHTML = document.getElementById("number");
 if (typeof(Storage) !== "undefined") {
-    if (localStorage.count) {
-        numberHTML.innerHTML = localStorage.count
-      } else {
-        localStorage.setItem("count" , number)
-      }
-} 
-let number = Number(localStorage.count);
+    if (!localStorage.clickcount) {
+        localStorage.count = 0;
+    } 
+    numberHTML.innerHTML = localStorage.count;
+} else {
+    numberHTML.innerHTML = "Sorry your browser does not support local storage..."
+}
 
 function Increase(){
-    number++;
-    localStorage.count = number;
-    numberHTML.innerHTML = localStorage.count;
+   localStorage.count++
+   numberHTML.innerHTML = localStorage.count;
 }
 
 function Lower(){
-    number--;
-    if (number < 0) {
-        number = 0;
-    }
-    localStorage.count = number;
+    localStorage.count--
     numberHTML.innerHTML = localStorage.count;
 }
 
 function Reset(){
-    number = 0;
-    localStorage.count = number;
-    numberHTML.innerHTML = localStorage.count;
+    localStorage.count = 0;
+   numberHTML.innerHTML = localStorage.count;
 }
