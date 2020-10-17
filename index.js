@@ -1,12 +1,12 @@
 
 const numberHTML = document.getElementById("number");
 if (typeof(Storage) !== "undefined") {
-    if (!localStorage.clickcount) {
+    if (!localStorage.count) {
         localStorage.count = 0;
     } 
     numberHTML.innerHTML = localStorage.count;
 } else {
-    numberHTML.innerHTML = "Sorry your browser does not support local storage..."
+    numberHTML.innerHTML = "Sorry your browser does not support local storage...";
 }
 
 function Increase(){
@@ -16,6 +16,9 @@ function Increase(){
 
 function Lower(){
     localStorage.count--
+    if (localStorage.count < 0) {
+        localStorage.count = 0;
+    }
     numberHTML.innerHTML = localStorage.count;
 }
 
