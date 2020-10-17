@@ -27,6 +27,7 @@ body h1{
     padding: 20px 50px;
     font-size: 25px;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
 button:hover{
     background-color: lightblue;
